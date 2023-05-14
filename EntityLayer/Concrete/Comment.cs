@@ -1,7 +1,10 @@
-namespace BlogApp.EntityLayer;
+using System.ComponentModel.DataAnnotations;
+
+namespace BlogApp.EntityLayer.Concrete;
 
 public class Comment
 {
+    [Key]
     public int ID { get; set; }
     public string Title { get; set; }
     public string Content { get; set; }

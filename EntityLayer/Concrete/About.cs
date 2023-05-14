@@ -1,7 +1,10 @@
-namespace BlogApp.EntityLayer;
+using System.ComponentModel.DataAnnotations;
+
+namespace BlogApp.EntityLayer.Concrete;
 
 public class About
 {
+    [Key]
     public int ID { get; set; }
     public string Details1 { get; set; }
     public string Details2 { get; set; }
