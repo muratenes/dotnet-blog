@@ -12,4 +12,5 @@ public class Comment
     public string Image { get; set; }
     public DateTime CreatedAt { get; set; }
     public bool Status { get; set; }
+    public Blog Blog { get; set; }
 }
