@@ -10,4 +10,7 @@ public class Category
     public bool Status { get; set; }
     public string Image { get; set; }
     public string ThumbnailImage { get; set; }
+    
+    
+    public List<Blog> Blogs { get; set; }
 }
