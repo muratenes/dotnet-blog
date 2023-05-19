@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using BlogApp.DataAccessLayer.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using BlogApp.Models;
 
@@ -7,10 +8,12 @@ namespace BlogApp.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private BlogRepository _blogRepository;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger,BlogRepository blogRepository)
     {
         _logger = logger;
+        _blogRepository = blogRepository;
     }
 
     public IActionResult Index()
