@@ -1,0 +1,38 @@
+@using BlogApp.EntityLayer.Concrete
+@model List<BlogApp.EntityLayer.Concrete.Category>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Kategori Adı</th>
+            <th>Durum</th>
+            <th>Detay</th>
+            <th>Sil</th>
+        </tr>
+        @foreach (Category item in Model)
+        {
+            <tr>
+                <td>@item.ID</td>
+                <td>@item.Name</td>
+                <td>@item.Status</td>
+                <td>@item.Description</td>
+                <td><a href="" class="btn btn-danger">@item.ID</a></td>
+            </tr>
+        }
+    </table>
+</div>
+</body>
+</html>

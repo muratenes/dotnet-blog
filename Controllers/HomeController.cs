@@ -8,12 +8,10 @@ namespace BlogApp.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
-    private BlogRepository _blogRepository;
 
-    public HomeController(ILogger<HomeController> logger,BlogRepository blogRepository)
+    public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
-        _blogRepository = blogRepository;
     }
 
     public IActionResult Index()

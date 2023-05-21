@@ -30,7 +30,7 @@ public class CategoryManager : ICategoryService
         _categoryDal.Update(category);
     }
 
-    public List<Category> List(Category category)
+    public List<Category> List()
     {
         return _categoryDal.All();
     }
