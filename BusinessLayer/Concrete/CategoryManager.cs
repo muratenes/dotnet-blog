@@ -1,3 +1,5 @@
+using BlogApp.DataAccessLayer.Abstract;
+using BlogApp.DataAccessLayer.EntityRepository;
 using BlogApp.EntityLayer.Concrete;
 using BusinessLayer.Abstract;
 
@@ -5,28 +7,36 @@ namespace BlogApp.BusinessLayer.Concrete;
 
 public class CategoryManager : ICategoryService
 {
+    private ICategoryDal _categoryDal;
+
+    public CategoryManager(ICategoryDal categoryDal)
+    {
+        _categoryDal = categoryDal;
+    }
+
+
     public void Add(Category category)
     {
-        throw new NotImplementedException();
+        _categoryDal.Insert(category);
     }
 
     public void Delete(Category category)
     {
-        throw new NotImplementedException();
+        _categoryDal.Delete(category);
     }
 
     public void Update(Category category)
     {
-        throw new NotImplementedException();
+        _categoryDal.Update(category);
     }
 
     public List<Category> List(Category category)
     {
-        throw new NotImplementedException();
+        return _categoryDal.All();
     }
 
     public Category Find(int id)
     {
-        throw new NotImplementedException();
+        return _categoryDal.Find(id);
     }
 }

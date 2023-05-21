@@ -4,6 +4,6 @@ using BlogApp.EntityLayer.Concrete;
 
 namespace BlogApp.DataAccessLayer.EntityRepository;
 
-public class EfBaseRepository<Entity> : GenericRepository<Entity> where Entity : class
+public class EfBaseRepository<T> : GenericRepository<T> where T : class
 {
 }
