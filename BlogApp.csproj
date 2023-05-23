@@ -30,7 +30,6 @@
 
   <ItemGroup>
     <Folder Include="BusinessLayer\ValidationRules\" />
-    <Folder Include="Pages\" />
   </ItemGroup>
 
 </Project>

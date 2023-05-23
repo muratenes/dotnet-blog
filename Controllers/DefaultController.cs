@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 using BlogApp.BusinessLayer.Concrete;
 using BlogApp.DataAccessLayer.Abstract;
 using BlogApp.DataAccessLayer.EntityRepository;
@@ -8,13 +8,11 @@ using BlogApp.Models;
 
 namespace BlogApp.Controllers;
 
-public class CategoryController : Controller
+public class DefaultController : Controller
 {
-    private CategoryManager cm = new CategoryManager(new EfCategoryRepository());
 
-    public IActionResult Index()
+    public PartialViewResult Header()
     {
-        var values = cm.List();
-        return View(values);
+        return PartialView();
     }
 }

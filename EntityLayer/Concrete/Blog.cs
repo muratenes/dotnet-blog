@@ -10,6 +10,9 @@ public class Blog
     public string Content { get; set; }
     public DateTime CreatedAt { get; set; }
     public Category Category { get; set; }
+    public string Image { get; set; }
+    public string ThumbnailImage { get; set; }
+    
 
     public List<Comment> Comments { get; set; }
 }
