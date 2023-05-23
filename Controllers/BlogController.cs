@@ -1,7 +1,7 @@
 using System.Diagnostics;
 using BlogApp.BusinessLayer.Concrete;
 using BlogApp.DataAccessLayer.Abstract;
-using BlogApp.DataAccessLayer.EntityRepository;
+using BlogApp.DataAccessLayer.EntityFramework;
 using BlogApp.DataAccessLayer.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using BlogApp.Models;
@@ -14,7 +14,7 @@ public class BlogController : Controller
 
     public IActionResult Index()
     {
-        var blogs = _blogManager.List();
+        var blogs = _blogManager.GetWithCategories();
         return View(blogs);
     }
 }

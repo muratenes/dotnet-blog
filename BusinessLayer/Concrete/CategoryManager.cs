@@ -1,5 +1,5 @@
 using BlogApp.DataAccessLayer.Abstract;
-using BlogApp.DataAccessLayer.EntityRepository;
+using BlogApp.DataAccessLayer.EntityFramework;
 using BlogApp.EntityLayer.Concrete;
 using BusinessLayer.Abstract;
 
